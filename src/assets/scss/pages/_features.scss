@@ -1,0 +1,233 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the features page.
+// -----------------------------------------------------------------------------
+// Hero
+.features-hero {
+  background: url("/img/features/purplebg.svg") no-repeat 0 0;
+  color: white;
+
+  &__text {
+    flex: 0 0 50%;
+    padding-right: 25px;
+
+    h1 {
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 30px;
+      line-height: 1.3;
+      margin-bottom: 15px;
+
+      @media (max-width: 1199.98px) {
+        margin-bottom: 30px;
+      }
+    }
+
+    button {
+      margin-bottom: 80px;
+
+      @media (max-width: 1199.98px) {
+        margin-bottom: 50px;
+      }
+    }
+
+    .home-hero__visits {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      max-width:450px;
+
+      @media (max-width: 575.98px) {
+        .h4 {
+          font-size:14px
+        }
+      }
+    }
+
+    @media (max-width: 991.98px) {
+      padding-right:0;
+    }
+  }
+
+  &__img {
+    flex:0 0 50%;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+
+    img {
+      max-width:500px;
+      width:100%
+    }
+
+    @media (max-width: 991.98px) {
+      margin-bottom:50px
+    }
+  }
+}
+
+.features-new {
+  padding:90px 0;
+
+  img.check {
+    float: left;
+    padding: 14px 20px 0px 0;
+  }
+
+  .container {
+    align-items:center;
+    display:flex;
+
+    @media (min-width: 1300px) {
+      max-width:1180px;
+    }
+
+    @media (max-width: 991.98px) {
+      flex-direction:column-reverse;
+    }
+  }
+
+  .list {
+    flex: 0 0 50%;
+
+    p {
+      line-height: 2;
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    padding:50px 0;
+  }
+
+  h2 {
+   margin-bottom:40px
+  }
+
+  p {
+   font-size:28px;
+   line-height:1.4
+  }
+
+  &__text p {
+    @media (max-width: 1299.98px) {
+      font-size: 24px;
+    }
+
+    @media (max-width: 1199.98px) {
+      font-size: 20px;
+    }
+
+    @media (max-width: 575.98px) {
+      font-size: 16px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__img {
+   flex: 0 0 50%;
+  }
+
+  &--alt {
+    padding-right: 0;
+    padding-left: 70px;
+
+    .container {
+      flex-direction: row-reverse;
+
+      @media (max-width: 991.98px) {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+}
+
+.features-media {
+  padding: 90px 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+
+    @media (min-width: 1300px) {
+      max-width: 1180px;
+    }
+
+    @media (max-width: 991.98px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    padding: 50px 0;
+  }
+
+  &--alt {
+    .container {
+      flex-direction:row-reverse;
+
+      @media (max-width: 991.98px) {
+        flex-direction: column-reverse;
+      }
+    }
+
+    .home-media__text {
+      padding-right: 0;
+      padding-left: 70px;
+
+      @media (max-width: 991.98px) {
+        padding: 0;
+      }
+    }
+  }
+
+  &__text {
+    flex: 0 0 50%;
+    padding-right: 70px;
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    a {
+      font-size: 26px;
+      font-family: 'ubuntu-mono';
+      margin-bottom: 30px;
+      display: block;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.4;
+
+      @media (max-width: 1299.98px) {
+        font-size: 24px;
+      }
+
+      @media (max-width: 1199.98px) {
+        font-size: 20px;
+      }
+
+      @media (max-width: 575.98px) {
+        font-size: 16px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+
+    @media (max-width: 991.98px) {
+      padding: 0;
+      margin-top: 70px;
+    }
+  }
+
+  &__img {
+    flex: 0 0 50%;
+  }
+}

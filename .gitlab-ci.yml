@@ -1,0 +1,10 @@
+image: node:14.15.0
+
+ci:
+  cache:
+    paths:
+      - node_modules/
+  script:
+    - npm install
+    - npm run lint
+    - npm run build

@@ -1,0 +1,42 @@
+/**
+ * Ubuntu Touch website
+ * Copyright (C) 2020 UBports Foundation <info@ubports.com>
+ * Copyright (C) 2020 Riccardo Riccio <cmsuser3754@zoho.eu>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published
+ * by the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
+module.exports = {
+  siteName: "Ubuntu Touch",
+  plugins: [
+    { use: "gridsome-plugin-svg" },
+    {
+      use: "@gridsome/source-filesystem",
+      options: {
+        baseDir: "./content",
+        path: "faq/*.md",
+        typeName: "Faq",
+        remark: {},
+      },
+    },
+    {
+      use: "gridsome-plugin-matomo",
+      options: {
+        host: "https://analytics.ubports.com",
+        siteId: 3,
+      },
+    },
+  ],
+  transformers: { remark: {} },
+};

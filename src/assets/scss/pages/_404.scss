@@ -1,0 +1,20 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the 404 page.
+// -----------------------------------------------------------------------------
+
+.page-not-found {
+  margin: 200px 20px;
+  max-width: 600px;
+
+  @media (max-width: 1299.98px) {
+    margin: 150px 20px;
+  }
+
+  h1 {
+    font-size: 60px;
+
+    @media (max-width: 575.98px) {
+      font-size: 40px;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="768px" viewBox="0 0 1440 768" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>purplebg</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1440" height="768"></rect>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#000000" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Demonstration-WIP" transform="translate(0.000000, -100.000000)">
+            <g id="purplebg" transform="translate(0.000000, 100.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#3A0628" xlink:href="#path-1"></use>
+                <polygon id="Rectangle" fill="#FFFFFF" opacity="0.0399999991" mask="url(#mask-2)" transform="translate(345.131257, 37.131257) rotate(-45.000000) translate(-345.131257, -37.131257) " points="-679.246204 -226.826704 1369.5757 -226.958479 1369.50872 301.089217 -679.313188 301.220992"></polygon>
+                <polygon id="Rectangle" fill="url(#linearGradient-3)" opacity="0.049999997" mask="url(#mask-2)" transform="translate(1255.875000, 664.972881) rotate(-45.000000) translate(-1255.875000, -664.972881) " points="526.457961 401.01492 1985.33974 400.883145 1985.29204 928.930841 526.410264 929.062616"></polygon>
+                <polygon id="Rectangle" fill="#FFFFFF" opacity="0.0299999993" mask="url(#mask-2)" transform="translate(1190.723716, 255.117365) rotate(-315.000000) translate(-1190.723716, -255.117365) " points="461.258981 -97.7715235 1920.14076 -97.5954395 1920.18845 608.006254 1276.77676 607.928596 461.306677 607.83017"></polygon>
+                <polygon id="Rectangle" fill="#FFFFFF" opacity="0.0199999996" mask="url(#mask-2)" transform="translate(178.125000, 739.236295) rotate(-315.000000) translate(-178.125000, -739.236295) " points="-551.339736 475.146559 907.542039 475.278335 907.589736 1003.32603 -551.292039 1003.19426"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
