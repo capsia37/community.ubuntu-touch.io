@@ -25,8 +25,8 @@ module.exports = {
       use: "@gridsome/source-filesystem",
       options: {
         baseDir: "./content",
-        path: "faq/*.md",
-        typeName: "Faq",
+        path: "**/*.md",
+        typeName: "Pages",
         remark: {},
       },
     },

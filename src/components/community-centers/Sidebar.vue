@@ -10,7 +10,7 @@
 
       <div class="sidebar-banner">
         <p class="bold">Hub Center Can help to decide where you belong in our community</p>
-        <a href="/community/community-center/"><button class="btn btn-secondary btn-block rounded-0">Go To Community Center!</button></a>
+        <a href="/"><button class="btn btn-secondary btn-block rounded-0">Go To Community Centers!</button></a>
       </div>
       <!-- Navigation -->
       <div v-if="anchors.length" class="sidebar-navigation">
