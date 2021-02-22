@@ -6,7 +6,7 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = function (api) {
-  api.onCreateNode(options => {
+  api.onCreateNode((options) => {
     if (options.internal.typeName === "Pages") {
       let pagePath = options.path;
       pagePath = pagePath.split("/");

@@ -26,7 +26,7 @@
         <!-- Body -->
         <div class="community-centers__body ">
           <!-- Center -->
-          <a v-for="article in $page.related.edges.map(n => n.node)" :href="article.path" class="center">
+          <a v-for="(article, index) in $page.related.edges.map(n => n.node)" :key="index" :href="article.path" class="center">
             <img :src="article.icon" alt="community-center-icon">
             <h2 class="h4">{{ article.title }}</h2>
             <p>{{ article.excerpt }}</p>
@@ -102,7 +102,7 @@ export default {
     Breadcrumb,
     Sidebar,
     Faq,
-    PageLinks
-  }
+    PageLinks,
+  },
 };
 </script>
