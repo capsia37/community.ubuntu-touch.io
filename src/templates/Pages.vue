@@ -81,7 +81,6 @@ query ($id: ID!, $category: String) {
     edges {
       node {
         title
-        subcategory
         layout
         icon
         excerpt

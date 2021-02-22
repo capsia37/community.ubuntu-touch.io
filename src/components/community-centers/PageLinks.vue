@@ -43,13 +43,13 @@
       </div>
     </div>
     <!-- Discussions -->
-    <div v-if="links.discussions.length" id="discussions" class="page-discussions">
+    <div v-if="links.join.length" id="discussions" class="page-discussions">
       <h2 id="content-discussions" class="h3 light">Discussions</h2>
       <!-- Group -->
-      <ul v-for="group in links.discussions" :key="group.groupIcon">
-        <li v-for="(link, index) in group.content" :key="index">
+      <ul>
+        <li v-for="(link, index) in links.join" :key="index">
           <a :href="link.target">
-            <img :src="'/img/icons/' + group.groupIcon + '.svg'" :alt="group.groupIcon + '-icon'" class="social-media-icon">
+            <img :src="'/img/icons/' + link.icon + '.svg'" :alt="link.icon + '-icon'" class="social-media-icon">
             {{ link.text }}
           </a>
         </li>
@@ -68,7 +68,7 @@ export default {
           resources: [],
           media: [],
           people: [],
-          discussions: [],
+          join: [],
         };
       },
       type: Object,

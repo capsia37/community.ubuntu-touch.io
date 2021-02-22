@@ -18,25 +18,4 @@ module.exports = function (api) {
       }
     }
   });
-
-  api.createManagedPages(async ({ graphql, createPage, removePageByPath }) => {
-    const { data } = await graphql(
-      "{ allPages { edges { node { id category subcategory path } } } }"
-    );
-
-
-    data.allPages.edges.forEach(({ node }) => {
-      console.log(node);
-      removePageByPath(node.path);
-      createPage({
-        path: node.path,
-        component: "./src/templates/Pages.vue",
-        context: {
-          id: node.id,
-          category: node.category,
-          subcategory: node.subcategory
-        }
-      });
-    });
-  });
 };
