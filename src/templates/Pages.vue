@@ -47,11 +47,12 @@
               <a :href="article.path">⟶ Find out more...</a>
             </div>
           </div>
+          <p><a class="btn btn-secondary btn-block rounded-0 d-inline" @click="newSubproject">Add a new subproject</a></p>
           <PageLinks
             v-if="$page.currentPage.externalLinks"
             :links="$page.currentPage.externalLinks"
           />
-          <a class="link" :href="'/admin/#/collections/pages/entries/'+$page.currentPage.fileInfo.path.split('.')[0]">Edit this page</a>
+          <p><a class="btn btn-secondary btn-block rounded-0 d-inline" :href="'/admin/#/collections/pages/entries/'+$page.currentPage.fileInfo.path.split('.')[0]">Edit this page</a></p>
         </div>
         <Sidebar
           v-if="!$page.currentPage.hideSidebar"
@@ -112,6 +113,22 @@ export default {
     Sidebar,
     Faq,
     PageLinks,
+  },
+  methods: {
+    newSubproject() {
+      console.log("Adding...");
+      let pageName = prompt(
+          "Enter page name, it should be lowercase and dash separated",
+          "new-page"
+        ),
+        currentPath = this.$page.currentPage.fileInfo.path.split(".")[0],
+        targetPath = currentPath.endsWith("index")
+          ? currentPath.slice(0, -6)
+          : currentPath;
+
+      window.location.href =
+        "/admin/#/collections/pages/entries/" + targetPath + "/" + pageName;
+    },
   },
 };
 </script>
