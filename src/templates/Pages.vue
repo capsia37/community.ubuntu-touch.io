@@ -40,6 +40,13 @@
       <div class="container">
         <div class="content">
           <div v-html="$page.currentPage.content"/>
+          <div v-if="$page.currentPage.layout == 'article'" class="row">
+            <div class="boxed" v-for="(article, index) in $page.related.edges.map(n => n.node)" :key="index">
+                <h2 class="h4">{{ article.title }}</h2>
+                <p>{{ article.excerpt }}</p>
+              <a :href="article.path">⟶ Find out more...</a>
+            </div>
+          </div>
           <PageLinks
             v-if="$page.currentPage.externalLinks"
             :links="$page.currentPage.externalLinks"
