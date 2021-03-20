@@ -33,6 +33,8 @@
     "bootstrap-vue": "^2.18.0",
     "gridsome": "^0.7.0",
     "gridsome-plugin-matomo": "^0.1.0",
+    "gridsome-plugin-netlify-cms": "^1.0.9",
+    "netlify-cms": "^2.10.100",
     "vue": "^2.6.12"
   },
   "devDependencies": {
