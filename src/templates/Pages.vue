@@ -126,8 +126,10 @@ export default {
           ? currentPath.slice(0, -6)
           : currentPath;
 
-      window.location.href =
-        "/admin/#/collections/pages/entries/" + targetPath + "/" + pageName;
+      if (pageName) {
+        window.location.href =
+          "/admin/#/collections/pages/entries/" + targetPath + "/" + pageName;
+      }
     },
   },
 };
