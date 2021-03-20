@@ -51,7 +51,7 @@
             v-if="$page.currentPage.externalLinks"
             :links="$page.currentPage.externalLinks"
           />
-          <a class="link" :href="'/admin/#/collections/pages/entries'+$route.path">Edit this page</a>
+          <a class="link" :href="'/admin/#/collections/pages/entries/'+$page.currentPage.fileInfo.path.split('.')[0]">Edit this page</a>
         </div>
         <Sidebar
           v-if="!$page.currentPage.hideSidebar"
@@ -84,6 +84,7 @@ query ($id: ID!, $category: String) {
     }
     onThisPage { text target }
     faq { question content }
+    fileInfo { path }
   }
   related: allPages(filter: { subcategory: { eq: $category }}) {
     edges {
