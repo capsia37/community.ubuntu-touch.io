@@ -7,23 +7,6 @@ hideBreadcrumb: false
 hideSidebar: false
 showHeaderImage: false
 
-subcategories:
-  - name: "Porting Project"
-    description: "Featuring a slick and easy-to-use interface based on the design of its predecessor, Canonical's Unity desktop environment, lomiri is the new name of Unity8 and all its related projects. Additionally, the interface that developers use to call on these projects will change. However, developers will only need to update to the new API when they'd like to package their apps for other distributions."
-    page: "/development/porting"
-  - name: "Core Development"
-    description: "Whatever your goals salfmslkf sldfk lkj afjasd;l gvnasldgvnasldgvnasldgvnasld gjnasdlkfgas ;lfdjjslkjaldmalmd almdlamd.ams.,m, we're here to helyoe you trying to learn a new skill or get better at something you already know how to do? Are you looking for something to add to your CV for volunteering and community engagement? Maybe you just really love the mobile platform and want to see it thrive."
-    page: "/development/core"
-  - name: "Core Apps"
-    description: "your measure of success. Are you trying to learn a new skill or get better at something you already know how to do? Are you looking for something to add to your CV for volunteering and community engagement? Maybe you just really love the mobile platform and want to see it thrive."
-    page: "/development/apps"
-  - name: "Halium Project"
-    description: "Whatever y Are you trying to learn a new skill or get better at something you already know how to do? Are you looking for something to add to your CV for volunteering and community engagement? Maybe you just really love the mobile platform and want to see it thrive."
-    page: "/development/halium"
-  - name: "Clickable"
-    description: "Whatever your goals are, we're here to help you be successful, no matter your measure of success. Are you trying to learn a new skill or get better at something you already know how to do? Are you looking for something to add to your"
-    page: "/development/porting"
-
 externalLinks:
   resources:
     - text: "Introduction to Clickable - Miguel Menéndez Carrion"

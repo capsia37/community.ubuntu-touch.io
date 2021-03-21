@@ -76,7 +76,6 @@ query ($id: ID!, $category: String) {
     layout category
     hideBreadcrumb hideSidebar showHeaderImage
     content
-    subcategories { name description page }
     externalLinks {
       resources { text category target }
       media { text category target }
