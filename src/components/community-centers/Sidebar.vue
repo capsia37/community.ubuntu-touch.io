@@ -19,8 +19,8 @@
           <b-nav-item
             v-for="(heading, index) in anchors"
             :key="index"
-            :href="heading.target"
-          >{{ heading.text }}
+            :href="heading.anchor"
+          >{{ heading.value }}
           </b-nav-item>
         </b-nav>
       </div>

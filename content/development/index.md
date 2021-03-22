@@ -58,24 +58,6 @@ externalLinks:
       icon: "irc"
       target: "#"
 
-onThisPage:
-  - text: "Overview"
-    target: "#content-overview"
-  - text: "Core Development"
-    target: "#content-core"
-  - text: "App Development"
-    target: "#content-app"
-  - text: "Resources"
-    target: "#content-resources"
-  - text: "Media"
-    target: "#content-media"
-  - text: "People"
-    target: "#content-people"
-  - text: "Discussions"
-    target: "#content-discussions"
-  - text: "FAQ"
-    target: "#faqs"
-
 faq:
   - question: "Where do I report Ubuntu Touch bugs?"
     content: "Whatever your goals are, we're here to help you be successful, no matter your measure of success. Are you trying to learn a new skill or get better at something you already know how to do? Are you looking for something to add to your CV for volunteering and community engagement? Maybe you just really love the mobile platform and want to see it thrive."

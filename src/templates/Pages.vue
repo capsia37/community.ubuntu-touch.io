@@ -56,7 +56,7 @@
         </div>
         <Sidebar
           v-if="!$page.currentPage.hideSidebar"
-          :anchors="$page.currentPage.onThisPage || []"
+          :anchors="filteredAnchors"
         />
       </div>
     </div>
@@ -82,7 +82,7 @@ query ($id: ID!, $category: String) {
       people { name target }
       join { text icon target }
     }
-    onThisPage { text target }
+    headings { anchor value depth }
     faq { question content }
     fileInfo { path }
   }
@@ -112,6 +112,58 @@ export default {
     Sidebar,
     Faq,
     PageLinks,
+  },
+  computed: {
+    filteredAnchors() {
+      let anchors = this.$page.currentPage.headings.filter(
+        (anchor) => anchor.depth > 1 && anchor.depth < 4
+      );
+      if (this.$page.currentPage.externalLinks) {
+        if (
+          this.$page.currentPage.externalLinks.resources &&
+          this.$page.currentPage.externalLinks.resources.length
+        )
+          anchors.push({
+            anchor: "#content-resources",
+            value: "Resources",
+            depth: 2,
+          });
+        if (
+          this.$page.currentPage.externalLinks.media &&
+          this.$page.currentPage.externalLinks.media.length
+        )
+          anchors.push({
+            anchor: "#content-media",
+            value: "Media",
+            depth: 2,
+          });
+        if (
+          this.$page.currentPage.externalLinks.people &&
+          this.$page.currentPage.externalLinks.people.length
+        )
+          anchors.push({
+            anchor: "#content-people",
+            value: "People",
+            depth: 2,
+          });
+        if (
+          this.$page.currentPage.externalLinks.join &&
+          this.$page.currentPage.externalLinks.join.length
+        )
+          anchors.push({
+            anchor: "#content-discussions",
+            value: "Discussions",
+            depth: 2,
+          });
+      }
+      if (this.$page.currentPage.faq && this.$page.currentPage.faq.length)
+        anchors.push({
+          anchor: "#faqs",
+          value: "Frequently asked questions",
+          depth: 2,
+        });
+      return anchors;
+    },
   },
   methods: {
     newSubproject() {
