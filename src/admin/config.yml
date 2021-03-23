@@ -72,7 +72,7 @@ collections:
             widget: "list"
             fields:
               - label: "Name or nickname"
-                name: "text"
+                name: "name"
                 widget: "string"
               - label: "Link destination"
                 name: "target"
