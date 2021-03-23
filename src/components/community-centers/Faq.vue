@@ -7,14 +7,28 @@
       <div class="questions">
         <ul id="pageFaqs">
           <!-- Question -->
-          <li v-for="( question, index ) in faqContent" :key="index">
+          <li v-for="(question, index) in faqContent" :key="index">
             <!-- Toggler -->
-            <a v-b-toggle="'collapse'+index" role="button" aria-expanded="false" aria-controls="collapse1">
-              {{question.question}}
-              <img class="angle-icon" src="/img/icons/angle-icon.svg" alt="angle-icon">
+            <a
+              v-b-toggle="'collapse' + index"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapse1"
+            >
+              {{ question.question }}
+              <img
+                class="angle-icon"
+                src="/img/icons/angle-icon.svg"
+                alt="angle-icon"
+              />
             </a>
             <!-- Collapse -->
-            <b-collapse :id="'collapse'+index" accordion="faq-accordion" data-parent="#pageFaqs" v-html="question.content">
+            <b-collapse
+              :id="'collapse' + index"
+              accordion="faq-accordion"
+              data-parent="#pageFaqs"
+              v-html="question.content"
+            >
             </b-collapse>
           </li>
         </ul>

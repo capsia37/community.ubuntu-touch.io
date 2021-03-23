@@ -1,21 +1,27 @@
 <template>
   <Layout>
-
     <Breadcrumb
       v-if="!$page.currentPage.hideBreadcrumb"
       :page-path="$route.path"
     />
 
     <!-- Hero -->
-    <div v-if="$page.currentPage.showHeaderImage" id="overview" class="page-hero">
+    <div
+      v-if="$page.currentPage.showHeaderImage"
+      id="overview"
+      class="page-hero"
+    >
       <picture>
-        <source media="(min-width:768px)" srcset="/img/page/hero.jpg">
-        <img src="/img/page/hero-mobile.jpg" alt="hero-img">
+        <source media="(min-width:768px)" srcset="/img/page/hero.jpg" />
+        <img src="/img/page/hero-mobile.jpg" alt="hero-img" />
       </picture>
     </div>
 
     <!-- Community Centers -->
-    <div v-if="$page.currentPage.layout == 'categories'" class="community-centers">
+    <div
+      v-if="$page.currentPage.layout == 'categories'"
+      class="community-centers"
+    >
       <div class="container">
         <!-- Header -->
         <div class="community-centers__header">
@@ -24,10 +30,15 @@
           <p>{{ $page.currentPage.details }}</p>
         </div>
         <!-- Body -->
-        <div class="community-centers__body ">
+        <div class="community-centers__body">
           <!-- Center -->
-          <a v-for="(article, index) in $page.related.edges.map(n => n.node)" :key="index" :href="article.path" class="center">
-            <img :src="article.icon" alt="community-center-icon">
+          <a
+            v-for="(article, index) in $page.related.edges.map((n) => n.node)"
+            :key="index"
+            :href="article.path"
+            class="center"
+          >
+            <img :src="article.icon" alt="community-center-icon" />
             <h2 class="h4">{{ article.title }}</h2>
             <p>{{ article.excerpt }}</p>
           </a>
@@ -36,23 +47,45 @@
     </div>
 
     <!-- Page Content -->
-    <div class="page-content" :class="{ 'page-content--sidebar': !$page.currentPage.hideSidebar }">
+    <div
+      class="page-content"
+      :class="{ 'page-content--sidebar': !$page.currentPage.hideSidebar }"
+    >
       <div class="container">
         <div class="content">
-          <div v-html="$page.currentPage.content"/>
+          <div v-html="$page.currentPage.content" />
           <div v-if="$page.currentPage.layout == 'article'" class="row">
-            <div v-for="(article, index) in $page.related.edges.map(n => n.node)" :key="index" class="boxed">
-                <h2 class="h4">{{ article.title }}</h2>
-                <p>{{ article.excerpt }}</p>
+            <div
+              v-for="(article, index) in $page.related.edges.map((n) => n.node)"
+              :key="index"
+              class="boxed"
+            >
+              <h2 class="h4">{{ article.title }}</h2>
+              <p>{{ article.excerpt }}</p>
               <a :href="article.path">⟶ Find out more...</a>
             </div>
           </div>
-          <p><a class="btn btn-secondary btn-block rounded-0 d-inline" @click="newSubproject">Add a new subproject</a></p>
+          <p>
+            <a
+              class="btn btn-secondary btn-block rounded-0 d-inline"
+              @click="newSubproject"
+              >Add a new subproject</a
+            >
+          </p>
           <PageLinks
             v-if="$page.currentPage.externalLinks"
             :links="$page.currentPage.externalLinks"
           />
-          <p><a class="btn btn-secondary btn-block rounded-0 d-inline" :href="'/admin/#/collections/pages/entries/'+$page.currentPage.fileInfo.path.split('.')[0]">Edit this page</a></p>
+          <p>
+            <a
+              class="btn btn-secondary btn-block rounded-0 d-inline"
+              :href="
+                '/admin/#/collections/pages/entries/' +
+                $page.currentPage.fileInfo.path.split('.')[0]
+              "
+              >Edit this page</a
+            >
+          </p>
         </div>
         <Sidebar
           v-if="!$page.currentPage.hideSidebar"
@@ -65,7 +98,6 @@
       v-if="$page.currentPage.faq.length"
       :faq-content="$page.currentPage.faq"
     />
-
   </Layout>
 </template>
 

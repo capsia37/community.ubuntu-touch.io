@@ -4,11 +4,20 @@
     <div class="container">
       <span>
         <a href="/">Home</a>
-        <img class="angle-icon r-270" src="/img/icons/angle-icon.svg" alt="angle-icon">
+        <img
+          class="angle-icon r-270"
+          src="/img/icons/angle-icon.svg"
+          alt="angle-icon"
+        />
       </span>
       <span v-for="(item, index) in breadcrumbItems" :key="index">
         <a :href="item.path">{{ item.text }}</a>
-        <img v-if="index < breadcrumbItems.length - 1" class="angle-icon r-270" src="/img/icons/angle-icon.svg" alt="angle-icon">
+        <img
+          v-if="index < breadcrumbItems.length - 1"
+          class="angle-icon r-270"
+          src="/img/icons/angle-icon.svg"
+          alt="angle-icon"
+        />
       </span>
     </div>
   </div>

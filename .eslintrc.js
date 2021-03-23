@@ -3,11 +3,11 @@ module.exports = {
     'plugin:vue/recommended',
     'plugin:prettier-vue/recommended',
     // Do not add `'prettier/vue'` if you don't want to use prettier for `<template>` blocks
-    'prettier/vue',
+    'prettier',
   ],
 
   settings: {
-    'prettier-vue': {
+    'prettier': {
       // Settings for how to process Vue SFC Blocks
       SFCBlocks: {
         /**
@@ -69,8 +69,6 @@ module.exports = {
 
   rules: {
     'prettier-vue/prettier': 'error',
-    'vue/no-v-html': 'off',
-    'vue/this-in-templates': 'off',
-    'vue/custom-event-name-casing': 'off'
+    'vue/no-v-html': "off"
   }
 }

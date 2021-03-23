@@ -1,10 +1,10 @@
 <template>
   <div :class="{ backdrop: appBackdrop }" @click="closeNavbar">
-  <Header/>
+    <Header />
 
-  <slot/>
+    <slot />
 
-  <Footer/>
+    <Footer />
   </div>
 </template>
 

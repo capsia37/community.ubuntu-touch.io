@@ -49,7 +49,11 @@
       <ul>
         <li v-for="(link, index) in links.join" :key="index">
           <a :href="link.target">
-            <img :src="'/img/icons/' + link.icon + '.svg'" :alt="link.icon + '-icon'" class="social-media-icon">
+            <img
+              :src="'/img/icons/' + link.icon + '.svg'"
+              :alt="link.icon + '-icon'"
+              class="social-media-icon"
+            />
             {{ link.text }}
           </a>
         </li>

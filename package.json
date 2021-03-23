@@ -34,19 +34,19 @@
     "gridsome": "^0.7.23",
     "gridsome-plugin-matomo": "^0.1.0",
     "gridsome-plugin-netlify-cms": "^1.0.9",
-    "netlify-cms": "^2.10.100",
+    "netlify-cms": "^2.10.102",
     "vue": "^2.6.12"
   },
   "devDependencies": {
-    "eslint": "^7.11.0",
-    "eslint-config-prettier": "^6.12.0",
-    "eslint-plugin-prettier": "^3.1.4",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-prettier-vue": "^2.1.1",
-    "eslint-plugin-vue": "^7.0.1",
+    "eslint-plugin-vue": "^7.8.0",
     "gridsome-plugin-svg": "0.0.14",
-    "node-sass": "^4.14.1",
-    "prettier": "^2.1.2",
+    "node-sass": "^5.0.0",
+    "prettier": "^2.2.1",
     "sass-loader": "^10.0.3",
-    "webpack-bundle-analyzer": "^4.1.0"
+    "webpack-bundle-analyzer": "^4.4.0"
   }
 }
