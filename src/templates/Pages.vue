@@ -160,6 +160,11 @@ import Sidebar from "~/components/community-centers/Sidebar.vue";
 import PageLinks from "~/components/community-centers/PageLinks.vue";
 
 export default {
+  metaInfo() {
+    return {
+      title: this.$page.currentPage.title,
+    };
+  },
   components: {
     Breadcrumb,
     Sidebar,
