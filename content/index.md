@@ -2,9 +2,10 @@
 title: 'UBports community centers'
 excerpt: 'We want you to join us to make difference, and leave your mark on the Ubuntu Touch operating system.'
 details: 'We have a set of topics that you may be interested in. Click on one to read more about that subject. Learn how to get started. What people you can contact if you have questions. See links to more information.'
-layout: 'categories'
-hideBreadcrumb: true
-hideSidebar: true
+options:
+  layout: 'categories'
+  hideBreadcrumb: true
+  hideSidebar: true
 ---
 
 # Welcome to the UBports Community

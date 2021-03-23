@@ -2,10 +2,11 @@
 title: "Porting Project"
 excerpt: "Expanding the horizons for new Ubuntu Touch users"
 icon: '/img/community-center/developers.jpg'
-layout: "article"
-hideBreadcrumb: false
-hideSidebar: false
-showHeaderImage: false
+options:
+  layout: "article"
+  hideBreadcrumb: false
+  hideSidebar: false
+  showHeaderImage: false
 
 externalLinks:
   resources:

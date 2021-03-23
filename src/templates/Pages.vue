@@ -1,13 +1,13 @@
 <template>
   <Layout>
     <Breadcrumb
-      v-if="!$page.currentPage.hideBreadcrumb"
+      v-if="!$page.currentPage.options.hideBreadcrumb"
       :page-path="$route.path"
     />
 
     <!-- Hero -->
     <div
-      v-if="$page.currentPage.showHeaderImage"
+      v-if="$page.currentPage.options.showHeaderImage"
       id="overview"
       class="page-hero"
     >
@@ -19,7 +19,7 @@
 
     <!-- Community Centers -->
     <div
-      v-if="$page.currentPage.layout == 'categories'"
+      v-if="$page.currentPage.options.layout == 'categories'"
       class="community-centers"
     >
       <div class="container">
@@ -54,7 +54,7 @@
       <div class="container">
         <div class="content">
           <div v-html="$page.currentPage.content" />
-          <div v-if="$page.currentPage.layout == 'article'" class="row">
+          <div v-if="$page.currentPage.options.layout == 'article'" class="row">
             <div
               v-for="(article, index) in $page.related.edges.map((n) => n.node)"
               :key="index"
@@ -88,7 +88,7 @@
           </p>
         </div>
         <Sidebar
-          v-if="!$page.currentPage.hideSidebar"
+          v-if="!$page.currentPage.options.hideSidebar"
           :anchors="filteredAnchors"
         />
       </div>
@@ -104,9 +104,8 @@
 <page-query>
 query ($id: ID!, $category: String) {
   currentPage: pages(id: $id) {
-    title excerpt details
-    layout category
-    hideBreadcrumb hideSidebar showHeaderImage
+    title excerpt details category
+    options { layout hideBreadcrumb hideSidebar showHeaderImage }
     content
     externalLinks {
       resources { text category target }
@@ -122,7 +121,6 @@ query ($id: ID!, $category: String) {
     edges {
       node {
         title
-        layout
         icon
         excerpt
         path

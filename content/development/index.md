@@ -2,10 +2,11 @@
 title: "Development"
 excerpt: "Help us build the Core product, Develop Ports, Lomiri and many more projects"
 icon: '/img/community-center/developers.jpg'
-layout: "article"
-hideBreadcrumb: false
-hideSidebar: false
-showHeaderImage: false
+options:
+  layout: "article"
+  hideBreadcrumb: false
+  hideSidebar: false
+  showHeaderImage: false
 
 externalLinks:
   resources:
