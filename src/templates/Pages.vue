@@ -1,13 +1,21 @@
 <template>
   <Layout>
     <Breadcrumb
-      v-if="!$page.currentPage.options.hideBreadcrumb"
+      v-if="
+        $page.currentPage.options
+          ? !$page.currentPage.options.hideBreadcrumb
+          : true
+      "
       :page-path="$route.path"
     />
 
     <!-- Hero -->
     <div
-      v-if="$page.currentPage.options.showHeaderImage"
+      v-if="
+        $page.currentPage.options
+          ? $page.currentPage.options.showHeaderImage
+          : false
+      "
       id="overview"
       class="page-hero"
     >
@@ -19,7 +27,11 @@
 
     <!-- Community Centers -->
     <div
-      v-if="$page.currentPage.options.layout == 'categories'"
+      v-if="
+        $page.currentPage.options
+          ? $page.currentPage.options.layout == 'categories'
+          : false
+      "
       class="community-centers"
     >
       <div class="container">
@@ -54,7 +66,14 @@
       <div class="container">
         <div class="content">
           <div v-html="$page.currentPage.content" />
-          <div v-if="$page.currentPage.options.layout == 'article'" class="row">
+          <div
+            v-if="
+              $page.currentPage.options
+                ? $page.currentPage.options.layout == 'article'
+                : false
+            "
+            class="row"
+          >
             <div
               v-for="(article, index) in $page.related.edges.map((n) => n.node)"
               :key="index"
@@ -88,7 +107,11 @@
           </p>
         </div>
         <Sidebar
-          v-if="!$page.currentPage.options.hideSidebar"
+          v-if="
+            $page.currentPage.options
+              ? !$page.currentPage.options.hideSidebar
+              : true
+          "
           :anchors="filteredAnchors"
         />
       </div>
